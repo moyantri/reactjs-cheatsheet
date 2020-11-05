@@ -5263,3 +5263,25 @@
      <a href={companyProfile.website}>More details</a>
      ```
      Remember that the future versions will throw an error for javascript URLs.
+    
+  322. ###  React Without ES6
+Normally you would define a React component as a plain JavaScript class:
+
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+If you don’t use ES6 yet, you may use the create-react-class module instead:
+
+var createReactClass = require('create-react-class');
+var Greeting = createReactClass({
+  render: function() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+});
+The API of ES6 classes is similar to createReactClass() with a few exceptions.
+
+Declaring Default Props
+Setting the Initial State
+Autobinding
